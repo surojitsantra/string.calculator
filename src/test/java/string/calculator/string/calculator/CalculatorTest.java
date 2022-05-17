@@ -60,7 +60,7 @@ public class CalculatorTest {
 		try {
 			Calculator.add("1," + String.valueOf(Long.MAX_VALUE - 1000));
 		} catch (IllegalArgumentException e) {
-			Assert.assertEquals(e.getMessage(), "Integer value overflow");
+			Assert.assertEquals(e.getMessage(), "Inuput number got overflow of Integer");
 		}
 	}
 
@@ -69,7 +69,7 @@ public class CalculatorTest {
 		try {
 			Calculator.add("100000," + String.valueOf(Integer.MAX_VALUE));
 		} catch (IllegalArgumentException e) {
-			Assert.assertEquals(e.getMessage(), "Integer value overflow");
+			Assert.assertEquals(e.getMessage(), "Summation got overflow");
 		}
 	}
 }
